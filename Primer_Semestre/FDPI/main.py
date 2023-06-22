@@ -1,6 +1,0 @@
-print("Hola Mundo")
-print("Carlos es Tonto")
-print("Hola Mundo")
-print("Carlos es Tonto")
-print("Hola Mundo")
-print("Carlos es Tonto")
