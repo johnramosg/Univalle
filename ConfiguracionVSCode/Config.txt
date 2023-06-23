@@ -1,0 +1,237 @@
+{
+  //Apariencia
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.lineHeight": 1.6,
+  "editor.guides.bracketPairsHorizontal": true, //Para que se vean los corchetes
+  "editor.guides.bracketPairs": true, //Para que se vean los corchetes
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.colorTheme": "Everforest Dark",
+  "editor.fontFamily": "Jetbrains mono",
+  "editor.fontWeight": 300,
+  "editor.fontLigatures": true, // Para que se vean las ligaduras
+  "editor.inlineSuggest.enabled": true,
+  "editor.wordWrap": "on",
+  "editor.linkedEditing": true,
+  "workbench.sideBar.location": "right",
+  "editor.folding": false,
+  "editor.lightbulb.enabled": false,
+  "editor.scrollbar.horizontal": "visible",
+  "editor.scrollBeyondLastLine": true,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.smoothScrolling": true,
+  "editor.minimap.enabled": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#d8a20c",
+    "editorCursor.background": "#000000",
+    "terminalCursor.foreground": "#66ff99"
+    // "errorLens.unusedVariable.color": "#FFA500", // Este es el color amarillo que deseas usar
+    // "errorLens.warningBackground": "#ff942f1b",
+    // "errorLens.warningForeground": "#fa973a",
+    // "errorLens.errorBackground": "#e454541b",
+    // "errorLens.errorForeground": "#ff6464"
+  },
+  "editor.unicodeHighlight.invisibleCharacters": true, //Para que se vean los espacios en blanco
+  "workbench.tree.indent": 20,
+  "scm.diffDecorationsGutterPattern": {
+    "added": true
+  }, // Para que se vean los cambios en el git
+  "workbench.tree.renderIndentGuides": "always", //Para que no se vea la barra de actividades
+  "editor.renderLineHighlight": "all", // Para que se vean las líneas resaltadas
+  "editor.cursorSurroundingLines": 90,
+
+  //Cursor
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.hover.delay": 75,
+  "editor.mouseWheelScrollSensitivity": 0.9,
+
+  // Terminal
+  "terminal.integrated.fontFamily": "Jetbrains mono",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.enableMultiLinePasteWarning": false, //Para que no salga el mensaje de advertencia al pegar en la terminal
+  "terminal.integrated.enableBell": true,
+  "terminal.integrated.localEchoEnabled": "on",
+  "terminal.integrated.localEchoExcludePrograms": [],
+  "terminal.integrated.macOptionClickForcesSelection": true,
+  "terminal.integrated.minimumContrastRatio": 3,
+  "terminal.integrated.tabs.focusMode": "singleClick",
+  "terminal.integrated.tabs.showActions": "never",
+  "terminal.integrated.tabs.showActiveTerminal": "never",
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.cursorWidth": 2,
+
+  //Prettier
+  "prettier.printWidth": 80, // Ancho de línea
+  "prettier.tabWidth": 2, // Tamaño de la tabulación
+  "prettier.singleQuote": true, // Comillas simples
+
+  //Customize UI
+  "customizeUI.activityBarHideSettings": true, // Para que no se vea el icono de configuración
+  "customizeUI.listRowHeight": 30, // Para que se vean los iconos más grandes
+  "customizeUI.titleBar": "inline", // Para que se vea el título de la ventana en la barra de título
+  "customizeUI.activityBar": "top", // Para que se vea la barra de actividades en la parte superior
+
+  //Live Server
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+
+  //Autoguardado
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.sortImports": true
+  },
+
+  //Css y Html
+  "[css]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Prettier
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  //Python
+  "[python]": {
+    "editor.formatOnType": true
+  },
+
+  //Javascript
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  //Error Lens and ESLINT
+  "errorLens.delay": 200, //Para que se vean los errores más rápido
+  "errorLens.gutterIconSize": "80%", //Para que se vean los errores más grandes
+  "errorLens.messageBackgroundMode": "message", //Sirve para que se vean los errores en el fondo
+  "errorLens.gutterIconSet": "borderless", //Para que se vean los errores sin borde
+  "errorLens.followCursor": "allLinesExceptActive", //Para que se vean los errores en todas las líneas excepto en la activa
+  "errorLens.borderRadius": "5px", //Para que se vean los errores con bordes redondeados
+  "errorLens.statusBarColorsEnabled": true,
+  "errorLens.statusBarMessageEnabled": true,
+  "errorLens.padding": "2",
+  "errorLens.fontSize": "14px",
+  "errorLens.fontFamily": "Iosevka",
+  "errorLens.fontWeight": "300",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "variable.other.readwrite",
+        "settings": {
+          "foreground": "#c4b815" // Este es el color amarillo que deseas usar
+        }
+      }
+    ]
+  },
+
+  //EsLint
+  // "eslint.debug": true,
+  // "eslint.format.enable": true,
+
+  //Preguntas de seguridad
+  "explorer.confirmDelete": false, //Para que no salga la pregunta de seguridad al eliminar un archivo
+  "security.workspace.trust.untrustedFiles": "open", //Esta configuración controla qué sucede cuando se abre un archivo no confiable en un espacio de trabajo no confiable. Con esta configuración, se abrirá el archivo no confiable en un espacio de trabajo no confiable.
+  "explorer.confirmDragAndDrop": false, //Para que no salga la pregunta de seguridad al mover un archivo
+
+  //Github Copilot
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "python": true
+  },
+
+  //Funcionalidades
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  "editor.autoClosingDelete": "always",
+  "editor.autoClosingOvertype": "always",
+  "editor.autoClosingQuotes": "beforeWhitespace",
+  "editor.comments.ignoreEmptyLines": false,
+  "editor.definitionLinkOpensInPeek": true,
+  "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.referenceSearch.trigger",
+  "editor.gotoLocation.alternativeDeclarationCommand": "editor.action.referenceSearch.trigger",
+  "editor.gotoLocation.alternativeImplementationCommand": "editor.action.referenceSearch.trigger",
+  "editor.gotoLocation.alternativeReferenceCommand": "editor.action.referenceSearch.trigger",
+  "editor.gotoLocation.alternativeTypeDefinitionCommand": "editor.action.referenceSearch.trigger",
+  "editor.inlayHints.enabled": "offUnlessPressed", // Esta configuración controla la visualización de sugerencias de código en línea. Con esta configuración, las sugerencias solo se muestran si se presiona una tecla determinada, como la tecla Alt o Ctrl Alt.
+  "editor.multiCursorPaste": "full", //Esta configuración determina cómo se pegarán los múltiples cursores en el editor. Con esta configuración, se pegará todo el texto en cada cursor.
+  "diffEditor.codeLens": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.quickSuggestionsDelay": 0,
+  "editor.suggest.insertMode": "replace",
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggestSelection": "first",
+  "workbench.list.smoothScrolling": true,
+  "workbench.commandPalette.preserveInput": true,
+  "workbench.sash.hoverDelay": 0,
+  "workbench.sash.size": 2,
+  "workbench.startupEditor": "readme", //Esta configuración controla qué editor se abre al iniciar VS Code. Con esta configuración, se abrirá el editor de README.md.
+  "screencastMode.verticalOffset": 90, //Para que no se vea el cursor en la grabación de pantalla
+  "editor.showFoldingControls": "always", //Para que no se vea la barra de menú, con alt se muestra
+  "editor.formatOnPaste": true, //Para que se formatee el código al pegarlo
+  "scm.diffDecorationsGutterWidth": 1,
+  // "breadcrumbs.filePath": "on", //Para que se vean las rutas de los archivos
+  // "breadcrumbs.symbolPath": "last", //Para que se vean las rutas de los símbolos
+  // "breadcrumbs.enabled": false, //Para que no se vean los breadcrumbs, que esto es lo que se ve en la parte superior del editor
+  // "workbench.layoutControl.enabled": false, //Para que no se vea el control de la barra lateral
+
+  //EverForest
+  "everforest.darkContrast": "hard",
+  "everforest.darkCursor": "orange",
+  "everforest.darkWorkbench": "high-contrast",
+  "everforest.italicKeywords": true,
+
+  //Catppuccin
+  "catppuccin.accentColor": "lavender",
+  "catppuccin.boldKeywords": false,
+
+  //Vim
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.showMarksInGutter": true,
+
+  //Git
+  "git.autofetch": "all",
+  "git.autoStash": true,
+  "git.enableCommitSigning": true,
+  "git.enableSmartCommit": true,
+  "git.fetchOnPull": true,
+  "git.followTagsWhenSync": true,
+  "git.mergeEditor": true,
+  "git.postCommitCommand": "sync",
+  "git.rebaseWhenSync": true,
+  "git.timeline.showUncommitted": true,
+  "git.untrackedChanges": "separate",
+
+  //Markdown to pdf
+  // "markdown-pdf.outputDirectory": "~/Documentos/PDF_Markdown/"
+
+  //Keybindings
+  "keyboard.dispatch": "keyCode", //Para que se vean los atajos de teclado en el editor
+
+  //Preview markdown
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "vsintellicode.modify.editor.suggestSelection": "choseToUpdateConfiguration",
+  "window.menuBarVisibility": "toggle"
+}
