@@ -13,6 +13,8 @@ def ingresar():
 
 
 def calcular():
+    Cortas.sort()
+    Largas.sort()
     EPC.delete(0, END)
     EPC.insert(0, Cortas)
     EPL.delete(0, END)
