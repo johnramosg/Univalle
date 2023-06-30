@@ -14,17 +14,23 @@ color_fondo = (1, 150, 70)
 colorlinea = (255, 0, 0)
 clock=pygame.time.Clock()
 def rojo():
+    posx1=random.randrange(0,1920)
+    posy1=random.randrange(0,1080)
     posx=random.randrange(0,1920)
     posy=random.randrange(0,1080)
-    pygame.draw.line(ventana, (255,0,0),(posx,posy),(posx,posy),40)
+    pygame.draw.line(ventana, (255,255,255),(posx,posy),(posx1,posy1),1)
 def verde():
     posx1=random.randrange(0,1920)
     posy1=random.randrange(0,1080)
-    pygame.draw.line(ventana, (0,255,0),(posx1,posy1),(posx1,posy1),40)
+    posx=random.randrange(0,1920)
+    posy=random.randrange(0,1080)
+    pygame.draw.line(ventana, (255,0,0),(posx,posy),(posx1,posy1),1)
 def azul():
     posx2=random.randrange(0,1920)
     posy2=random.randrange(0,1080)
-    pygame.draw.line(ventana, (0,0,255),(posx2,posy2),(posx2,posy2),40)
+    posx1=random.randrange(0,1920)
+    posy1=random.randrange(0,1080)
+    pygame.draw.line(ventana, (0,0,255),(posx1,posy1),(posx2,posy2),1)
 pygame.display.update()
 
 
@@ -38,4 +44,4 @@ while True:
     verde()
     azul()
     pygame.display.update()
-    #clock.tick(1000)
+    #clock.tick(10)
