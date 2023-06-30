@@ -1,0 +1,10 @@
+git init
+git add Documento.txt
+git commit -m " "
+
+git status
+git status -s
+git show
+git add .
+git push
+git pull
