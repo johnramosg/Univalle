@@ -10,7 +10,7 @@ ventana = pygame.display.set_mode(
     )
 )
 pygame.display.set_caption("Titulo de la ventana")
-color_fondo = (1, 150, 70)
+color_fondo = (255,255 ,255)
 colorlinea = (255, 0, 0)
 clock=pygame.time.Clock()
 def rojo():
@@ -18,13 +18,16 @@ def rojo():
     posy1=random.randrange(0,1080)
     posx=random.randrange(0,1920)
     posy=random.randrange(0,1080)
-    pygame.draw.line(ventana, (255,255,255),(posx,posy),(posx1,posy1),1)
+    tamaño=random.randrange(0,10)
+    pygame.draw.line(ventana, (0,0,0),(posx,posy),(posx1,posy1),tamaño)
 def verde():
     posx1=random.randrange(0,1920)
     posy1=random.randrange(0,1080)
     posx=random.randrange(0,1920)
     posy=random.randrange(0,1080)
-    pygame.draw.line(ventana, (255,0,0),(posx,posy),(posx1,posy1),1)
+    tamaño=random.randrange(0,10)
+    pygame.draw.line(ventana, (255,0,0),(posx,posy),(posx1,posy1),tamaño)
+"""
 def azul():
     posx2=random.randrange(0,1920)
     posy2=random.randrange(0,1080)
@@ -32,7 +35,7 @@ def azul():
     posy1=random.randrange(0,1080)
     pygame.draw.line(ventana, (0,0,255),(posx1,posy1),(posx2,posy2),1)
 pygame.display.update()
-
+"""
 
 
 while True:
@@ -42,6 +45,6 @@ while True:
             sys.exit()
     rojo()
     verde()
-    azul()
+    #azul()
     pygame.display.update()
     #clock.tick(10)
