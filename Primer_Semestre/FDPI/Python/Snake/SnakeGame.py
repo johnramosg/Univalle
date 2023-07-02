@@ -3,7 +3,6 @@ import pygame
 import sys
 import random
 import time
-import GIFImage
 
 #Definición de las funciones de Puntajes y Juego terminado.
 def Snake1Score(Puntuacion1):
@@ -22,12 +21,12 @@ def juegoTerminado():
     if (Puntuacion1==5 and Puntuacion2!=5):
         texto = fuente.render("AMÉRICA CAMPEÓN", True, red)
         ventana.blit(texto, [280, alto/2])
-        ventana.blit(movie,[ancho/2,alto/2])
+        
         
     elif(Puntuacion2==5 and Puntuacion1!=5):
         texto = fuente.render("CALI CAMPEÓN", True, green)
         ventana.blit(texto, [290, alto/2])
-        ventana.blit(movie,[ancho/2,alto/2])
+        
         
         
 
@@ -48,7 +47,6 @@ serpiente_01 = pygame.image.load("imagenes/serpent-head-02.png")
 serpiente_02 = pygame.image.load("imagenes/serpent-head-01.png")
 egg = pygame.image.load("imagenes/ball.png")
 icono = pygame.image.load("imagenes/serpent-icon.png")
-movie = GIFImage("correr.gif")
 ventana.blit(fondo,(0,0))
 pygame.display.set_icon(icono)
 
@@ -98,8 +96,10 @@ Snake2Score(Puntuacion2)
 juegoTerminado()
 pygame.display.update()
 
+jugando=True
+en_pausa=False
 #Bucle principal
-while True:
+while jugando:
         
     #Recorre todos los eventos  
     for evento in pygame.event.get():
@@ -136,58 +136,88 @@ while True:
                 movimiento_y2=-20
             elif evento.key==pygame.K_DOWN and movimiento_y2!=-20:
                 movimiento_x2=0
-                movimiento_y2=20  
-                  
-    Snake1_x+=movimiento_x1
-    Snake1_y+=movimiento_y1
-    ventana.blit(fondo,(0,0))
-    velocidadS(velocidad)
-    Snake1Score(Puntuacion1)
-    Snake2Score(Puntuacion2)
-    juegoTerminado()
-    ventana.blit(egg,[Comida_x,Comida_y,20,20])
-    ventana.blit(serpiente_01, [Snake1_x,Snake1_y,20,20])
-    ventana.blit(serpiente_02, [Snake2_x,Snake2_y,20,20])   
-    pygame.display.update()
-    
-    if(Puntuacion1==5 or Puntuacion2==5):
+                movimiento_y2=20 
+            elif evento.type == pygame.KEYDOWN:
+                if evento.key == pygame.K_p:
+                    en_pausa = not en_pausa  # Cambiar entre pausa y juego
+
+    if not en_pausa:
+        Snake1_x+=movimiento_x1
+        Snake1_y+=movimiento_y1
         ventana.blit(fondo,(0,0))
-        pygame.mixer.music.stop()
-        Victoria.play()
-        juegoTerminado()
-        time.sleep(20)
-        sys.exit() 
-        
-    if(Snake1_x==Comida_x and Snake1_y==Comida_y):
-        Puntuacion1+=1
-        velocidad+=5
-        obtener.play()
-        print('Encontraste la comida snake 1')
-        ventana.blit(serpiente_01, [Snake1_x,Snake1_y,20,20])
-        Snake1Score(Puntuacion1)
         velocidadS(velocidad)
-        Comida_x=random.randrange(0,ancho,20)
-        Comida_y=random.randrange(0,alto,20)
+        Snake1Score(Puntuacion1)
+        Snake2Score(Puntuacion2)
+        juegoTerminado()
         ventana.blit(egg,[Comida_x,Comida_y,20,20])
+        ventana.blit(serpiente_01, [Snake1_x,Snake1_y,20,20])
+        ventana.blit(serpiente_02, [Snake2_x,Snake2_y,20,20])   
+        pygame.display.update()
         
-    Snake2_x+=movimiento_x2
-    Snake2_y+=movimiento_y2
-    ventana.blit(fondo,(0,0))
-    
-    Snake1Score(Puntuacion1)
-    Snake2Score(Puntuacion2)
-    velocidadS(velocidad)
-    
-    if(Snake2_x==Comida_x and Snake2_y==Comida_y):
-        Puntuacion2+=1
-        obtener.play()
-        velocidad+=5
-        print('Encontraste la comida snake 2')
-        ventana.blit(serpiente_02, [Snake2_x,Snake2_y,20,20])  
+        if(Puntuacion1==5 or Puntuacion2==5):
+            ventana.blit(fondo,(0,0))
+            pygame.mixer.music.stop()
+            Victoria.play()
+            juegoTerminado()
+            time.sleep(20)
+            sys.exit() 
+            
+        if(Snake1_x==Comida_x and Snake1_y==Comida_y):
+            Puntuacion1+=1
+            velocidad+=5
+            obtener.play()
+            print('Encontraste la comida snake 1')
+            ventana.blit(serpiente_01, [Snake1_x,Snake1_y,20,20])
+            Snake1Score(Puntuacion1)
+            velocidadS(velocidad)
+            Comida_x=random.randrange(0,ancho,20)
+            Comida_y=random.randrange(0,alto,20)
+            ventana.blit(egg,[Comida_x,Comida_y,20,20])
+            
+        Snake2_x+=movimiento_x2
+        Snake2_y+=movimiento_y2
+        ventana.blit(fondo,(0,0))
+        
+        Snake1Score(Puntuacion1)
         Snake2Score(Puntuacion2)
         velocidadS(velocidad)
-        Comida_x=random.randrange(0,ancho,20)
-        Comida_y=random.randrange(0,alto,20)
-        ventana.blit(egg,[Comida_x,Comida_y,20,20])
-                
+        
+        if(Snake2_x==Comida_x and Snake2_y==Comida_y):
+            Puntuacion2+=1
+            obtener.play()
+            velocidad+=5
+            print('Encontraste la comida snake 2')
+            ventana.blit(serpiente_02, [Snake2_x,Snake2_y,20,20])  
+            Snake2Score(Puntuacion2)
+            velocidadS(velocidad)
+            Comida_x=random.randrange(0,ancho,20)
+            Comida_y=random.randrange(0,alto,20)
+            ventana.blit(egg,[Comida_x,Comida_y,20,20])
+
+        if Snake1_x<=0:
+            Snake1_x=ancho
+        elif Snake1_x>=ancho:
+            Snake1_x=0
+        if Snake1_y<=0:
+            Snake1_y=alto
+        elif Snake1_y>=alto:
+            Snake1_y=0
+
+        if Snake2_x<=0:
+            Snake2_x=ancho
+        elif Snake2_x>=ancho:
+            Snake2_x=0
+        if Snake2_y<=0:
+            Snake2_y=alto
+        elif Snake2_y>=alto:
+            Snake2_y=0
+    # Lógica para pausa
+    while en_pausa:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                jugando = False
+                en_pausa = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_p:
+                    en_pausa = not en_pausa  # Cambiar entre pausa y juego
     clock.tick(velocidad)
