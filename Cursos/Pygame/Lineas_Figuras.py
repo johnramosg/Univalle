@@ -5,8 +5,8 @@ from pygame.locals import *
 pygame.init()
 ventana = pygame.display.set_mode(
     (
-        1920,
-        1080,
+        400,
+        300,
     )
 )
 pygame.display.set_caption("Titulo de la ventana")
