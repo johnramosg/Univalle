@@ -22,15 +22,10 @@ def juegoTerminado():
         texto = fuente.render("AMÉRICA CAMPEÓN", True, red)
         ventana.blit(texto, [280, alto/2])
         
-        
     elif(Puntuacion2==5 and Puntuacion1!=5):
         texto = fuente.render("CALI CAMPEÓN", True, green)
         ventana.blit(texto, [290, alto/2])
         
-        
-        
-
- 
 #Dimensiones de la ventana y elementos.
 ancho=800
 alto=650
@@ -121,8 +116,6 @@ while jugando:
                 movimiento_x1=0
                 movimiento_y1=20
 
-                
-    
         #Movimientos Snake 2
         if evento.type==pygame.KEYDOWN and evento.key!=pygame.K_a and evento.key!=pygame.K_s and evento.key!=pygame.K_w and evento.key!=pygame.K_d:
             if evento.key==pygame.K_LEFT and movimiento_x2!=20:
