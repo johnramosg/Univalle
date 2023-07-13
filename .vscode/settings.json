@@ -6,7 +6,7 @@
   "editor.guides.bracketPairsHorizontal": true, //Para que se vean los corchetes
   "editor.guides.bracketPairs": true, //Para que se vean los corchetes
   "workbench.productIconTheme": "fluent-icons",
-  "workbench.colorTheme": "Everforest Light",
+  //"workbench.colorTheme": "Everforest Dark",
   "editor.fontFamily": "Jetbrains mono",
   "editor.fontWeight": 300,
   "editor.fontLigatures": true, // Para que se vean las ligaduras
