@@ -104,7 +104,8 @@
 
   //Python
   "[python]": {
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8"
   },
 
   //Javascript
@@ -233,5 +234,6 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "vsintellicode.modify.editor.suggestSelection": "choseToUpdateConfiguration",
-  "window.menuBarVisibility": "toggle"
+  "window.menuBarVisibility": "toggle",
+  "python.formatting.provider": "none"
 }
