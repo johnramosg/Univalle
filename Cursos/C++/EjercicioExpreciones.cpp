@@ -9,6 +9,7 @@ int main(){
   cout << "Digite el valor de b: ";cin >>b;
   cout << "Digite el valor de c: ";cin >>c;
   cout << "Digite el valor de d: ";cin >>d;
+  //Hola
 
   resultado=(a+b)/(a+c);
 
