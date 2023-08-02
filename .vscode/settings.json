@@ -235,5 +235,8 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "vsintellicode.modify.editor.suggestSelection": "choseToUpdateConfiguration",
   "window.menuBarVisibility": "toggle",
-  "python.formatting.provider": "none"
+  "python.formatting.provider": "none",
+  "files.associations": {
+    "iostream": "cpp"
+  }
 }
