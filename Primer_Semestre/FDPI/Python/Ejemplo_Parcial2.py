@@ -17,6 +17,7 @@ def totales():
 
 gui = Tk()
 gui.geometry("")
+gui.resizable(False,False)
 
 
 marco1 = Frame(gui)
