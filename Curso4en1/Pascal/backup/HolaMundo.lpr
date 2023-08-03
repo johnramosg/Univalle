@@ -1,0 +1,5 @@
+program HolaMundo;
+
+begin
+end.
+
