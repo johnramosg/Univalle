@@ -8,12 +8,14 @@
       <Unit>
         <Filename Value="HolaMundo.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="10" Y="5"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="21" Y="6"/>
         <UsageCount Value="20"/>
-        <Loaded Value="True"/>
       </Unit>
     </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="-1"/>
+    </General>
     <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
