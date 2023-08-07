@@ -9,21 +9,15 @@
         <Filename Value="Salida.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="3" Y="4"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="10" Y="6"/>
         <UsageCount Value="20"/>
-        <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="1">
-      <Position>
-        <Filename Value="Salida.lpr"/>
-        <Caret Line="5" Column="11"/>
-      </Position>
-      <Position>
-        <Filename Value="Salida.lpr"/>
-        <Caret Line="4" Column="13"/>
-      </Position>
-    </JumpHistory>
+    <General>
+      <ActiveWindowIndexAtStart Value="-1"/>
+    </General>
+    <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
