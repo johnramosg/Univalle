@@ -10,7 +10,7 @@ pygame.init()
 win=pygame.display.set_mode((300,300))
 pygame.display.set_caption("Hola")
 fuente=pygame.font.SysFont("italic",70)
-texto=fuente.render("L",True,(255,0,0))
+texto=fuente.render("Salo",True,(255,0,0))
 
 
 pygame.draw.circle(win,(255,0,0),(110,100),50)
@@ -22,7 +22,7 @@ pygame.draw.line(win,(255,0,0),(230,125),(145,250),5)
 pygame.draw.line(win,(0,0,0),(205, 137),(95, 140),37)
 pygame.draw.line(win,(0,0,0),(216, 129),(196, 157),16)
 pygame.draw.line(win,(0,0,0),(79, 125),(103, 168),14)
-win.blit(texto, [140, 120])
+win.blit(texto, [100, 110])
 
 while True:
     for evento in pygame.event.get():
